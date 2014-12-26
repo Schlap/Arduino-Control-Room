@@ -3,29 +3,30 @@
   <head>
     <title>Arduino Control Room</title>
     <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
-    <script src="js/controller.js"></script>
+    <script src="/js/controller.js"></script>
+    <script src="/js/socket.io"></script>
+    <script src="/js/controller.js"></script>
   </head>
     <body>
       <h1>Arduino Control Room</h1>
-      <button class="light-on">On</button>
-      <button class="light-off">Off</button>
-      <button class="light-blink">Blink</button>
-      <button class="light-stop">Stop</button>
-
+        <section class="controls">
+          <button class="light-on">On</button>
+          <button class="light-off">Off</button>
+          <button class="light-blink">Blink</button>
+          <button class="light-strobe">Strobe</button>
+        </section>
 
       <script>
-
-      $(document).ready(function(){
         var socket = io();
-        lightOn(socket);
-        lightOff(socket);
-        lightBlink(socket);
-        lightStop(socket);
-      });
-
+        $(document).ready(function(){
+          lightOn(socket);
+          lightOff(socket);
+          lightBlink(socket);
+          lightStrobe(socket);
+          lightPulse(socket);
+          keyLightOn(socket);
+          keyLightOff(socket);
+        });
       </script>
-
-      <script src="/js/socket.io"></script>
-      <script src="/js/controller.js"></script>
     </body>
 </html>
