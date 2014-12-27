@@ -1,32 +1,32 @@
 function lightOn(socket){
-  $('.light-on').on('click', function(){
+  $('#light-on').on('click', function(){
     socket.emit('light-on');
   });
 };
 
 function lightOff(socket){
-  $('.light-off').on('click', function(){
+  $('#light-off').on('click', function(){
     socket.emit('light-off');
   });
 };
 
 function lightBlink(socket){
-  $('.light-blink').on('click', function(){
+  $('#light-blink').on('click', function(){
     socket.emit('light-blink');
   });
 };
 
 function lightStrobe(socket){
-  $('.light-strobe').on('click', function(){
+  $('#light-strobe').on('click', function(){
     socket.emit('light-strobe');
   });
 };
 
-function lightPulse(socket){
-  $('.light-pulse').on('click', function (){
-    socket.emit('light-pulse');
+function lightFade (socket){
+  $('#light-fade').on('click', function(){
+    socket.emit('light-fade');
   });
-};
+}
 
 function keyLightOn(socket){
   $(document).keypress(function(e){

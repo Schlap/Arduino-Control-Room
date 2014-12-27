@@ -15,35 +15,45 @@ app.get('/', function(req, res){
   res.render('index');
 });
 
+
 io.on('connection', function(socket){
 
   socket.on('light-on', function(){
-    if (board.isReady) {var led = new five.Led(13);
+    if (board.isReady) {var led = new five.Led(11);
     led.on()};
   });
 
   socket.on('light-off', function(){
-    if(board.isReady){var led = new five.Led(13);
+    if(board.isReady){var led = new five.Led(11);
     led.off()};
   });
 
   socket.on('light-blink', function(){
-    if(board.isReady){var led = new five.Led(13);
-    led.blink(250)};
+    if(board.isReady){var led = new five.Led(11);
+    led.blink(1000)};
   });
 
   socket.on('light-strobe', function(){
-    if(board.isReady){var led = new five.Led(13);
-    led.strobe(1000)}
+    if(board.isReady){var led = new five.Led(11);
+    led.strobe(50);
+    };
+  });
+
+  socket.on('light-fade', function(){
+    if(board.isReady){var led = new five.Led(11);
+    led.fadeIn();
+      board.wait(5000, function(){
+        led.fadeOut();
+      })};
   });
 
   socket.on('key-light-on', function(){
-    if(board.isReady){var led = new five.Led(13);
+    if(board.isReady){var led = new five.Led(11);
     led.on()};
   });
 
   socket.on('key-light-off', function(){
-    if(board.isReady){var led = new five.Led(13);
+    if(board.isReady){var led = new five.Led(11);
     led.off()};
   });
 });

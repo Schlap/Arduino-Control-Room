@@ -6,27 +6,42 @@
     <script src="/js/controller.js"></script>
     <script src="/js/socket.io"></script>
     <script src="/js/controller.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
   </head>
     <body>
-      <h1>Arduino Control Room</h1>
-        <section class="controls">
-          <button class="light-on">On</button>
-          <button class="light-off">Off</button>
-          <button class="light-blink">Blink</button>
-          <button class="light-strobe">Strobe</button>
+      <section class="container">
+        <section class="navbar">
+          <h1 class="title">Arduino Control Room</h1>
         </section>
-
-      <script>
-        var socket = io();
-        $(document).ready(function(){
-          lightOn(socket);
-          lightOff(socket);
-          lightBlink(socket);
-          lightStrobe(socket);
-          lightPulse(socket);
-          keyLightOn(socket);
-          keyLightOff(socket);
-        });
-      </script>
+          <section class="control-container">
+            <ul class="controls">
+              <li><button id="light-on">On</button></li>
+              <li><button id="light-off">Off</button></li>
+              <li><button id="light-blink">Blink</button></li>
+              <li><button id="light-strobe">Strobe</button></li>
+              <li><button id='light-fade'>Fade</button></li>
+            </ul>
+          </section>
+            <!-- <section class="keyboard-controls-container">
+              <h3>Keyboard Controls:</h3>
+                <ul>
+                  <li>w = On</li>
+                  <li>e = Off</li>
+                </ul>
+            </section> -->
+              <script>
+                var socket = io();
+                $(document).ready(function(){
+                  lightOn(socket);
+                  lightOff(socket);
+                  lightBlink(socket);
+                  lightStrobe(socket);
+                  lightFade(socket);
+                  keyLightOn(socket);
+                  keyLightOff(socket);
+                });
+              </script>
+      </section>
     </body>
 </html>
