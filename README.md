@@ -1,0 +1,1 @@
+This is a simple javascript interface that sends information to a little arduino uno micro-controller chip. You can signal the arduino uno using a node server. This project has taught me how to use web sockets (sockets.io) to stream information from client side to server side and vice versa
