@@ -28,6 +28,12 @@ function lightFade (socket){
   });
 }
 
+function lightBrightness (socket){
+  $('#light-brightness').on('click', function(){
+    socket.emit('light-brightness');
+  });
+}
+
 function keyLightOn(socket){
   $(document).keypress(function(e){
     if(e.which == 119){

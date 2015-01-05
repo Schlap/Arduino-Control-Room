@@ -47,6 +47,12 @@ io.on('connection', function(socket){
       })};
   });
 
+  socket.on('light-brightness', function(){
+    if(board.isReady){var led = new five.Led(11);
+      led.brightness(128);
+    };
+  });
+
   socket.on('key-light-on', function(){
     if(board.isReady){var led = new five.Led(11);
     led.on()};
