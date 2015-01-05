@@ -1,5 +1,3 @@
-/public/arduino-logo-black.png
-
 This is a simple javascript interface that sends information to an Arduino Uno micro-controller chip. You can signal the Arduino using a node server.
 
 This project has taught me how to use web sockets (sockets.io) to stream information from client side to server side and vice versa.
