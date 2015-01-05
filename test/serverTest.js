@@ -1,4 +1,4 @@
-wevar mocha = require('mocha');
+var mocha = require('mocha');
 var chai = require('chai');
 var Browser = require('zombie');
 var expect = chai.expect;
