@@ -62,6 +62,11 @@ io.on('connection', function(socket){
     if(board.isReady){var led = new five.Led(11);
     led.off()};
   });
+
+  socket.on('c#', function(){
+    if(board.isReady){ var piezo = new five.Piezo(3);
+    piezo.play("C4", 1/4)};
+  });
 });
 
 server.listen(3000);

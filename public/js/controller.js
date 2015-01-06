@@ -51,3 +51,14 @@ function keyLightOff(socket){
     };
   });
 }
+
+function cSharp(socket){
+  $(document).keypress(function(e){
+    if(e.which == 97){
+      socket.emit('c#');
+    }
+  });
+  $("#piezo-sharp").on('click', function(){
+    socket.emit('c#');
+  });
+}
