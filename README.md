@@ -6,15 +6,13 @@ It includes the Johnny-Five framework on the server-side for writing basic comma
 
 I really found this immensely pleasurable. Writing code to manipulate the real world was a bit if rush.
 
-Tools used:
-
-Testing:
+==Testing:
 
 * Mocha
 * Chai(expect library)
 * Zombie
 
-Frameworks:
+==Frameworks:
 
 * Node.js
 * Express
@@ -22,6 +20,15 @@ Frameworks:
 * EJS
 * Johnny-Five
 
-Languages:
+==Languages:
 
 * Javascript
+
+==How to use:
+
+- clone this repo and cd inside it
+- run node server.js
+- go to local host 3000
+- plug in an Arduino Uno and load up standard firmata
+- place an led on pin 11
+- start pressing buttons!

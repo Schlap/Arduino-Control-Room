@@ -64,8 +64,10 @@ io.on('connection', function(socket){
   });
 
   socket.on('c#', function(){
-    if(board.isReady){ var piezo = new five.Piezo(3);
-    piezo.play("C4", 1/4)};
+    if(board.isReady){ var piezo1 = new five.Piezo(3);
+    piezo1.play("C4", 1/4)};
+    if(board.isReady){ var piezo2 = new five.Piezo();
+      piezo2.play("C4", 1/4)};
   });
 });
 
