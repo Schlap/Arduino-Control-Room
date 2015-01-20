@@ -6,13 +6,13 @@ It includes the Johnny-Five framework on the server-side for writing basic comma
 
 I really found this immensely pleasurable. Writing code to manipulate the real world was a bit if rush.
 
-==Testing:
+== Testing:
 
 * Mocha
 * Chai(expect library)
 * Zombie
 
-==Frameworks:
+== Frameworks:
 
 * Node.js
 * Express
@@ -20,11 +20,11 @@ I really found this immensely pleasurable. Writing code to manipulate the real w
 * EJS
 * Johnny-Five
 
-==Languages:
+== Languages:
 
 * Javascript
 
-==How to use:
+== How to use:
 
 - clone this repo and cd inside it
 - run node server.js
