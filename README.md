@@ -1,18 +1,18 @@
-This is a simple javascript interface that sends information to an Arduino Uno micro-controller chip. You can signal the Arduino using a node server.
+# Arduino Control Room (ACR) { var work = inProgress };
 
-This project has taught me how to use web sockets (sockets.io) to stream information from client side to server side and vice versa.
+This is a simple javascript interface that sends information to an Arduino Uno micro-controller chip through a node server.
+There are buttons on the screen with assigned functions that will make an Arduino do things provided you have the correct hardware.
 
-It includes the Johnny-Five framework on the server-side for writing basic commands to an led. Jquery is used to capture the clients input, handles the event and triggers the corresponding action(server-side) assigned to it using sockets.io.
+![alt tag](https://raw.github.com/schlap/arduino-control-room/master/public/arduino-logo-black.png)
 
-I really found this immensely pleasurable. Writing code to manipulate the real world was a bit if rush.
-
-== Testing:
+## Testing
 
 * Mocha
 * Chai(expect library)
 * Zombie
+* My eyes
 
-== Frameworks:
+## Frameworks
 
 * Node.js
 * Express
@@ -20,15 +20,21 @@ I really found this immensely pleasurable. Writing code to manipulate the real w
 * EJS
 * Johnny-Five
 
-== Languages:
+## Hardware
+
+* Arduino Uno
+* Light Emitting Diode (LED)
+* Buzzer
+* More to come!
+
+## Languages
 
 * Javascript
+* Standard Firmata (Arduino)
 
-== How to use:
+## Use It
 
-- clone this repo and cd inside it
-- run node server.js
-- go to local host 3000
-- plug in an Arduino Uno and load up standard firmata
-- place an led on pin 11
-- start pressing buttons!
+## The Future for ACR
+
+- Continue building an extensive library of customised functions
+- Develop a good looking interface to use for home automation
