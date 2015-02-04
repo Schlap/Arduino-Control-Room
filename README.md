@@ -34,6 +34,15 @@ There are buttons on the screen with assigned functions that will make an Arduin
 
 ## Use It
 
+* clone this repo
+* enter directory
+* connect Arduino Uno
+* upload standard firmata
+* place led in pin 11
+* node server.js
+* go to localhost:3000
+* press buttons
+
 ## The Future for ACR
 
 - Continue building an extensive library of customised functions
